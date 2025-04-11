@@ -21,8 +21,8 @@ set_app(APP)
 
 
 
-def run_once(req: int, cm: bool, endpoint_suffix: str, data):
-    clean()
+def run_once(req: int, cm: str, endpoint_suffix: str, data):
+    clean2()
     deploy(cm=cm)
     frontend_ip = get_ip("frontend")
     endpoint= f'http://{frontend_ip}/{endpoint_suffix}'
@@ -34,8 +34,8 @@ def run_once(req: int, cm: bool, endpoint_suffix: str, data):
     # os.kill(p.pid, signal.SIGINT)
     # p.terminate()
     # p.wait()
-    if cm:
-        res["hit_rate"] = get_all_hit_rate()
+    if cm == "true":
+        res["hit_rate"] = get_hit_rate_redis()
     return res
 
 
@@ -59,10 +59,10 @@ def main():
     }
 
     for req in reqs:
-        baseline = run_once(req, cm=False, endpoint_suffix=baseline_endpoint, data=baseline_data)
+        baseline = run_once(req, cm="false", endpoint_suffix=baseline_endpoint, data=baseline_data)
         print("Baseline:", baseline)
         baselines[req] = baseline
-        our = run_once(req, cm=True, endpoint_suffix=ours_endpoint, data=ours_data)
+        our = run_once(req, cm="true", endpoint_suffix=ours_endpoint, data=ours_data)
         print("Ours:", our)
         ours[req] = our
     clean2()
