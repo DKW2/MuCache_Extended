@@ -24,8 +24,8 @@ def start_proxy(endpoint):
 
 
 
-def run_once(req: int, cm: bool, endpoint_suffix: str):
-    clean()
+def run_once(req: int, cm: str, endpoint_suffix: str):
+    clean2()
     deploy(cm=cm)
     p = start_proxy(endpoint=endpoint_suffix)
     res = run_shell(compose_oha_proxy(req=req))
@@ -35,8 +35,8 @@ def run_once(req: int, cm: bool, endpoint_suffix: str):
     os.kill(p.pid, signal.SIGINT)
     p.terminate()
     p.wait()
-    if cm:
-        res["hit_rate"] = get_all_hit_rate()
+    if cm == "true":
+        res["hit_rate"] = get_hit_rate_redis()
     return res
 
 
@@ -49,10 +49,10 @@ def main():
     ours_endpoint = f'ro_hitormiss'
 
     for req in reqs:
-        baseline = run_once(req, cm=False, endpoint_suffix=baseline_endpoint)
+        baseline = run_once(req, cm="false", endpoint_suffix=baseline_endpoint)
         print("Baseline:", baseline)
         baselines[req] = baseline
-        our = run_once(req, cm=True, endpoint_suffix=ours_endpoint)
+        our = run_once(req, cm="true", endpoint_suffix=ours_endpoint)
         print("Ours:", our)
         ours[req] = our
     clean2()

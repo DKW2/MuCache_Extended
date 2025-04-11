@@ -2,7 +2,7 @@ package social
 
 import (
 	"context"
-	"github.com/eniac/mucache/pkg/invoke"
+	"github.com/DKW2/MuCache_Extended/pkg/invoke"
 )
 
 func ComposePost(ctx context.Context, text string, creatorId string) {

@@ -4,7 +4,7 @@
 package common
 
 // In local setup, urls are var, set the following during compiling
-// -ldflags "-X github.com/eniac/mucache/pkg/wrappers.MemcachedUrl=..."
+// -ldflags "-X github.com/DKW2/MuCache_Extended/pkg/wrappers.MemcachedUrl=..."
 // or during runtime
 // common.MemcachedUrl = "..."
 

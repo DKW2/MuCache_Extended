@@ -1,4 +1,4 @@
-module github.com/eniac/mucache
+module github.com/DKW2/MuCache_Extended
 
 go 1.19
 

@@ -2,7 +2,7 @@ package social
 
 import (
 	"context"
-	"github.com/eniac/mucache/pkg/state"
+	"github.com/DKW2/MuCache_Extended/pkg/state"
 	"github.com/lithammer/shortuuid"
 	"time"
 )

@@ -2,7 +2,7 @@ package hotel
 
 import (
 	"context"
-	"github.com/eniac/mucache/pkg/state"
+	"github.com/DKW2/MuCache_Extended/pkg/state"
 )
 
 func datesIntersect(inDate1 string, outDate1 string, inDate2 string, outDate2 string) bool {

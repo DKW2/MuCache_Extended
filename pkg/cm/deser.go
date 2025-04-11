@@ -2,7 +2,7 @@ package cm
 
 import (
 	"fmt"
-	"github.com/eniac/mucache/pkg/utility"
+	"github.com/DKW2/MuCache_Extended/pkg/utility"
 	"github.com/goccy/go-json"
 	"strings"
 )

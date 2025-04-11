@@ -1,8 +1,8 @@
 package cm
 
 import (
-	"github.com/eniac/mucache/pkg/cm"
-	"github.com/eniac/mucache/pkg/common"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/common"
 )
 
 // These two functions do the communication with the caller cache manager

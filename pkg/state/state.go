@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 	dapr "github.com/dapr/go-sdk/client"
-	"github.com/eniac/mucache/pkg/cm"
-	"github.com/eniac/mucache/pkg/common"
-	"github.com/eniac/mucache/pkg/wrappers"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/common"
+	"github.com/DKW2/MuCache_Extended/pkg/wrappers"
 	"github.com/goccy/go-json"
 )
 

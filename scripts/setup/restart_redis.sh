@@ -7,7 +7,7 @@ fi
 
 nworkers=$1
 
-setup_path="$HOME"/mucache/scripts/setup
+setup_path="$HOME"/MuCache_Extended/scripts/setup
 
 for i in $(seq 1 "$nworkers"); do
   helm uninstall redis"$i" || true

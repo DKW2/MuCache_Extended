@@ -8,7 +8,7 @@ fi
 
 nworkers=$1
 
-setup_path="$HOME"/mucache/scripts/setup
+setup_path="$HOME"/MuCache_Extended/scripts/setup
 
 # Launch Redis on each worker node
 for i in $(seq 1 "$nworkers"); do

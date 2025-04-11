@@ -4,18 +4,20 @@ from fabric import Connection, ThreadingGroup
 from common import *
 from envs import *
 
-SETUP_PATH = "./mucache/scripts/setup"
+SETUP_PATH = "./MuCache_Extended/scripts/setup"
 
 
 def master_conn():
     return Connection(HOST_SERVERS[0], connect_kwargs={
         'key_filename': KEYFILE,
+        'passphrase': PASSPHRASE
     })
 
 
 def worker_conn(idx: int):
     return Connection(HOST_SERVERS[idx], connect_kwargs={
         'key_filename': KEYFILE,
+        'passphrase': PASSPHRASE
     })
 
 
@@ -29,6 +31,7 @@ def setup_workers():
     workers = HOST_SERVERS[1:]
     group = ThreadingGroup(*workers, connect_kwargs={
         'key_filename': KEYFILE,
+        'passphrase': PASSPHRASE
     })
     res = group.run(os.path.join("./", "worker.sh"))
     print(res)

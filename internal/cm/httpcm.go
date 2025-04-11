@@ -3,8 +3,8 @@ package cm
 import (
 	"github.com/goccy/go-json"
 	"fmt"
-	"github.com/eniac/mucache/pkg/cm"
-	"github.com/eniac/mucache/pkg/common"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/common"
 	"github.com/golang/glog"
 	"net/http"
 )

@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/eniac/mucache/internal/loadcm"
-	"github.com/eniac/mucache/pkg/cm"
-	"github.com/eniac/mucache/pkg/wrappers"
+	"github.com/DKW2/MuCache_Extended/internal/loadcm"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/wrappers"
 	"net/http"
 	"time"
 )

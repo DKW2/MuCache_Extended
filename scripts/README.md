@@ -16,7 +16,7 @@ On the controller
 
 ```bash
 pip3 install fabric
-git clone https://github.com/eniac/mucache
+git clone https://github.com/DKW2/MuCache_Extended
 ```
 
 copy the minifest file to the mucache/

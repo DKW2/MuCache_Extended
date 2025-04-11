@@ -2,7 +2,7 @@ package hotel
 
 import (
 	"context"
-	"github.com/eniac/mucache/pkg/state"
+	"github.com/DKW2/MuCache_Extended/pkg/state"
 )
 
 func StoreRate(ctx context.Context, rate Rate) string {

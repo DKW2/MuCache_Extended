@@ -3,9 +3,9 @@ package wrappers
 import (
 	"context"
 	"fmt"
-	"github.com/eniac/mucache/pkg/cm"
-	"github.com/eniac/mucache/pkg/common"
-	"github.com/eniac/mucache/pkg/utility"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/common"
+	"github.com/DKW2/MuCache_Extended/pkg/utility"
 	"github.com/goccy/go-json"
 	"hash/fnv"
 	"net/http"

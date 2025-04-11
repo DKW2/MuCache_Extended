@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/eniac/mucache/internal/singleservice"
-	"github.com/eniac/mucache/pkg/state"
-	"github.com/eniac/mucache/pkg/wrappers"
+	"github.com/DKW2/MuCache_Extended/internal/singleservice"
+	"github.com/DKW2/MuCache_Extended/pkg/state"
+	"github.com/DKW2/MuCache_Extended/pkg/wrappers"
 	"net/http"
 	"runtime"
 )

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/eniac/mucache/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
 	"net/http"
 )
 

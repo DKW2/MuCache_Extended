@@ -2,7 +2,7 @@ package social
 
 import (
 	"context"
-	"github.com/eniac/mucache/pkg/state"
+	"github.com/DKW2/MuCache_Extended/pkg/state"
 )
 
 func GetFollowers(ctx context.Context, userId string) []string {

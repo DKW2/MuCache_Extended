@@ -2,8 +2,8 @@ package wrappers
 
 import (
 	"fmt"
-	"github.com/eniac/mucache/pkg/cm"
-	"github.com/eniac/mucache/pkg/utility"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/utility"
 	"sync"
 )
 

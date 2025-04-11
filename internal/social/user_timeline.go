@@ -2,8 +2,8 @@ package social
 
 import (
 	"context"
-	"github.com/eniac/mucache/pkg/invoke"
-	"github.com/eniac/mucache/pkg/state"
+	"github.com/DKW2/MuCache_Extended/pkg/invoke"
+	"github.com/DKW2/MuCache_Extended/pkg/state"
 )
 
 func ReadUserTimeline(ctx context.Context, userId string) []Post {

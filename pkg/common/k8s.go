@@ -3,7 +3,7 @@
 
 package common
 
-import "github.com/eniac/mucache/pkg/nodeIdx"
+import "github.com/DKW2/MuCache_Extended/pkg/nodeIdx"
 
 // in k8s, urls are const, build with -tags k8s,nodex
 

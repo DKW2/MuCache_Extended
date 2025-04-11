@@ -3,10 +3,10 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/eniac/mucache/internal/social"
-	"github.com/eniac/mucache/pkg/cm"
-	"github.com/eniac/mucache/pkg/common"
-	"github.com/eniac/mucache/pkg/wrappers"
+	"github.com/DKW2/MuCache_Extended/internal/social"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/common"
+	"github.com/DKW2/MuCache_Extended/pkg/wrappers"
 	"net/http"
 	"runtime"
 )

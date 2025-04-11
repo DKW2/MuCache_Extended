@@ -3,12 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/eniac/mucache/internal/acmeair"
-	"github.com/eniac/mucache/internal/social"
+	"github.com/DKW2/MuCache_Extended/internal/acmeair"
+	"github.com/DKW2/MuCache_Extended/internal/social"
 	"net/http"
 	"runtime"
 
-	"github.com/eniac/mucache/pkg/wrappers"
+	"github.com/DKW2/MuCache_Extended/pkg/wrappers"
 )
 
 func heartbeat(w http.ResponseWriter, r *http.Request) {

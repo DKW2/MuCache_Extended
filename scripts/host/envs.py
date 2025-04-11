@@ -7,5 +7,7 @@ if CLOUDLAB_USER is None:
 KEYFILE = os.getenv("private_key")
 if KEYFILE is None:
     exit("private_key is not set in environment. source env.sh first.")
-
+PASSPHRASE = os.getenv("passphrase")
+if PASSPHRASE is None:
+    exit("passphrase is not set in environment. source env.sh first.")
 HOST_SERVERS = [f'{CLOUDLAB_USER}@{s}' for s in SERVERS]

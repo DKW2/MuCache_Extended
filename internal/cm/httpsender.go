@@ -1,7 +1,7 @@
 package cm
 
 import (
-	"github.com/eniac/mucache/pkg/cm"
+	"github.com/DKW2/MuCache_Extended/pkg/cm"
 	"github.com/golang/glog"
 	"time"
 )

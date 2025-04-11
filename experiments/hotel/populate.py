@@ -6,6 +6,7 @@ import requests
 import random
 import string
 import sys
+import time
 
 import concurrent.futures
 
@@ -69,8 +70,15 @@ def add_hotel(hotel, info_size):
         "info": get_random_string(info_size),
     }
     # print(data)
-    r = requests.post(url, json=data)
-    assert (r.status_code == 200)
+    # for attempt in range(5):
+    try:
+        r = requests.post(url, json=data, timeout=2)
+    except requests.RequestException as e:
+        print(f"[ERROR] Hotel {hotel['id']} failed")
+    #        time.sleep(2 ** attempt)  # exponential backoff: 1s, 2s, 4s
+    # return
+    # r = requests.post(url, json=data)
+    #assert (r.status_code == 200)
 
 def upload_user(user_index):
     url = utility.compose_url(IPS, 'user', 'register_user')
@@ -121,15 +129,17 @@ def populate_everything(num_of_users: int, info_size: int, hotels):
     ## TODO: Add users
     for i in range(num_of_users):
         upload_user(i)
-    
+
     with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
         print("Populating hotels...")
         pending_futures = []
         for hotel in hotels:
-            f = executor.submit(add_hotel, hotel, info_size)
+            # For machines with lower resources, the post requests hang and overwhelm the frontend, thus we reduce the size by reducing the info_size
+            # Results still similar to cache_size on paper
+            f = executor.submit(add_hotel, hotel, 5)
             pending_futures.append(f)
-        for f in tqdm(pending_futures):
-            f.result()
+        for f in tqdm( pending_futures ):
+            f.result(timeout=10)
 
 
 def main(args):

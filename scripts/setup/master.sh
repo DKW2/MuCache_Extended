@@ -50,7 +50,7 @@ helm repo update
 HOSTNAME=$(hostname | cut -d. -f1)
 curl -sfL https://get.k3s.io | sh -s - --token 111 --write-kubeconfig-mode 644 --node-name "$HOSTNAME" --flannel-backend=host-gw --disable traefik,servicelb --disable-network-policy
 
-echo "export PYTHONPATH=$HOME/mucache/" >>"$HOME"/.bashrc
+echo "export PYTHONPATH=$HOME/MuCache_Extended/" >>"$HOME"/.bashrc
 echo "export KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >>"$HOME"/.bashrc
 
 echo "Remember to run" '`source ~/.bashrc`' "to reload the path!"

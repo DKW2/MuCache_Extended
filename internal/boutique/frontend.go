@@ -2,7 +2,7 @@ package boutique
 
 import (
 	"context"
-	"github.com/eniac/mucache/pkg/invoke"
+	"github.com/DKW2/MuCache_Extended/pkg/invoke"
 )
 
 func Home(ctx context.Context, request HomeRequest) HomeResponse {

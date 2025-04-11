@@ -3,8 +3,8 @@ package cm
 import (
 	"bytes"
 	"fmt"
-	"github.com/eniac/mucache/pkg/common"
-	"github.com/eniac/mucache/pkg/utility"
+	"github.com/DKW2/MuCache_Extended/pkg/common"
+	"github.com/DKW2/MuCache_Extended/pkg/utility"
 	"github.com/goccy/go-json"
 	"github.com/golang/glog"
 	zmq "github.com/pebbe/zmq4"
